@@ -1,0 +1,245 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  font-weight: 500;
+}
+
+ul li,
+ol li {
+  list-style-type: none;
+}
+
+/* General Styles */
+
+:root {
+  --font-clr-primary: #363636;
+  --font-clr-secondary: #888888;
+  --box-clr-primary: #2f2f2f;
+  --box-clr-secondary: #f5f5f5;
+  --bg-clr: #ffffff;
+  --pstpn-clr: #dc819b;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+}
+
+body {
+  background: var(--bg-clr);
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+}
+
+h2,
+h3 {
+  font-size: 1.25rem;
+}
+
+.selected-item {
+  background: var(--box-clr-primary);
+  color: var(--bg-clr);
+  border-radius: 10%;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--font-clr-secondary);
+  height: 5rem;
+  color: var(--font-clr-secondary);
+}
+
+header .wrapper {
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  gap: 2.5rem;
+  padding-left: 4.5rem;
+}
+
+header span {
+  color: var(--font-clr-primary);
+  font-weight: 500;
+}
+
+.login-start {
+  display: flex;
+}
+
+.login-start .log-in {
+  padding: 1.625rem 2.5rem;
+}
+
+.get-started {
+  background: var(--box-clr-primary);
+  padding: 1.625rem 4.5rem;
+  color: var(--bg-clr);
+}
+
+/* Main Styles */
+
+main {
+  padding: 2rem 4.5rem;
+}
+
+main .wrapper {
+  justify-content: space-between;
+}
+
+.main-display {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  width: 64%;
+}
+
+.page-flow span {
+  background: #f3f3f3;
+  padding: 0.5rem 0.5rem;
+  border-radius: 20%;
+  font-weight: 400;
+}
+
+.page-flow strong {
+  padding: 0.5rem 0.5rem;
+}
+
+main nav ol {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  text-transform: uppercase;
+}
+
+main nav ol li {
+  padding: 0.5rem 0.8rem;
+  color: var(--font-clr-secondary);
+}
+
+.conferences {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.conference-block {
+  display: grid;
+  gap: 0.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--font-clr-secondary);
+}
+
+.conference-info {
+  color: var(--font-clr-secondary);
+  font-size: 0.8rem;
+}
+
+.postponed {
+  color: var(--pstpn-clr);
+}
+
+.no-border {
+  border-bottom: none;
+}
+
+/* Aside Styles */
+
+.discover {
+  width: 30%;
+  margin-top: 4rem;
+}
+
+.discover .wrapper {
+  display: flex;
+  flex-flow: column;
+  border: 1px solid var(--font-clr-secondary);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem 1rem 1rem;
+}
+
+.discover .wrapper h3 {
+  padding: 0 0 0.5rem 1rem;
+}
+
+.discover-block {
+  padding: 1rem;
+  border-radius: 0.2rem;
+}
+
+.discover-block h4 {
+  display: inline-flex;
+  gap: 0.4rem;
+}
+
+.discover-block p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
